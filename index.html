@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krytex Bot • Legal</title>
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --glass: rgba(255,255,255,0.08);
+      --accent: #6cf2c2;
+      --text: #e6e9ef;
+      --muted: #9aa4b2;
+      --blur: blur(14px);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #12172e, var(--bg));
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      padding: 2rem;
+      display: grid;
+      gap: 1.5rem;
+      animation: fadeUp 1s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 0;
+    }
+
+    p {
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border-radius: 18px;
+      padding: 2rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 30px 70px rgba(0,0,0,.55);
+    }
+
+    .card span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: .6rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Krytex Bot — Legal</h1>
+    <p>Official legal information and support for Krytex Bot</p>
+
+    <div class="cards">
+
+      <a class="card" href="https://haswanthkumar2009.github.io/korvex/terms" target="_blank">
+        <span>📜</span>
+        <h3>Terms of Service</h3>
+        <p>Rules & usage guidelines</p>
+      </a>
+
+      <a class="card" href="https://krytex-dev.github.io/Krytex/PRIVACY.html" target="_blank">
+        <span>🔐</span>
+        <h3>Privacy Policy</h3>
+        <p>How we handle data</p>
+      </a>
+
+      <a class="card" href="mailto:support@krytexbot.xyz">
+        <span>📞</span>
+        <h3>Contact Us</h3>
+        <p>Support & inquiries</p>
+      </a>
+
+    </div>
+
+    <footer>© 2026 Krytex Bot</footer>
+  </div>
+</body>
+</html>
