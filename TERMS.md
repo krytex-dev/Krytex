@@ -69,7 +69,7 @@ Terms may be updated at any time. Continued use indicates acceptance of updates.
 For support, questions, or appeals:
 
 - 📧 Email: **krytex.devs@gamil.com**
-- 💬 Support Server: **https://discord.gg/nQxbZDq5uc**
+- 💬 Support Server: **[https://discord.gg/krytex](https://discord.gg/nQxbZDq5uc)**
 
 ---
 
