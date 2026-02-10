@@ -35,7 +35,7 @@
       width: 100%;
       padding: 2rem;
       display: grid;
-      gap: 1.5rem;
+      gap: 1.8rem;
       animation: fadeUp 1s ease;
     }
 
@@ -79,6 +79,30 @@
       margin-bottom: .6rem;
     }
 
+    .contact {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border-radius: 18px;
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+
+    .contact h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -95,11 +119,11 @@
 <body>
   <div class="container">
     <h1>Krytex Bot — Legal</h1>
-    <p>Official legal information and support for Krytex Bot</p>
+    <p>Official legal information for Krytex Bot</p>
 
     <div class="cards">
 
-      <a class="card" href="https://haswanthkumar2009.github.io/korvex/terms" target="_blank">
+      <a class="card" href="https://krytex-dev.github.io/Krytex/TERMS.html" target="_blank">
         <span>📜</span>
         <h3>Terms of Service</h3>
         <p>Rules & usage guidelines</p>
@@ -111,12 +135,18 @@
         <p>How we handle data</p>
       </a>
 
-      <a class="card" href="mailto:support@krytexbot.xyz">
-        <span>📞</span>
-        <h3>Contact Us</h3>
-        <p>Support & inquiries</p>
-      </a>
+    </div>
 
+    <!-- Contact Section -->
+    <div class="contact">
+      <h3>📞 Contact</h3>
+      <p>
+        Email: <a href="mailto:krytex.devs@gamil.com">krytex.devs@gamil.com</a><br>
+        Support Server:
+        <a href="https://discord.gg/nQxbZDq5uc" target="_blank">
+          discord.gg/krytex
+        </a>
+      </p>
     </div>
 
     <footer>© 2026 Krytex Bot</footer>
