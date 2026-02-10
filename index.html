@@ -28,6 +28,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow-x: hidden;
     }
 
     .container {
@@ -43,11 +44,14 @@
       text-align: center;
       color: var(--accent);
       margin-bottom: 0;
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      animation: glow 3s ease-in-out infinite;
     }
 
     p {
       text-align: center;
       color: var(--muted);
+      font-size: 0.95rem;
     }
 
     .cards {
@@ -65,16 +69,21 @@
       text-decoration: none;
       color: var(--text);
       box-shadow: 0 20px 50px rgba(0,0,0,.35);
-      transition: transform .35s ease, box-shadow .35s ease;
+      transition: transform .4s ease, box-shadow .4s ease;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 1.5s;
     }
 
     .card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 30px 70px rgba(0,0,0,.55);
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 35px 80px rgba(0,0,0,.6);
     }
 
     .card span {
-      font-size: 2rem;
+      font-size: 2.1rem;
       display: block;
       margin-bottom: .6rem;
     }
@@ -86,6 +95,7 @@
       padding: 1.8rem;
       text-align: center;
       box-shadow: 0 20px 50px rgba(0,0,0,.35);
+      animation: fadeUp 1.2s ease;
     }
 
     .contact h3 {
@@ -103,15 +113,54 @@
       text-decoration: underline;
     }
 
+    .devs {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      opacity: 0.9;
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
-      font-size: .85rem;
+      font-size: .8rem;
+      margin-top: 0.5rem;
     }
 
+    /* Animations */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(25px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px rgba(108,242,194,0.2); }
+      50% { text-shadow: 0 0 22px rgba(108,242,194,0.6); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    /* 📱 Mobile Improvements */
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1rem;
+        gap: 1.4rem;
+      }
+
+      .card {
+        padding: 1.6rem;
+      }
+
+      .contact {
+        padding: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -122,7 +171,6 @@
     <p>Official legal information for Krytex Bot</p>
 
     <div class="cards">
-
       <a class="card" href="https://krytex-dev.github.io/Krytex/TERMS.html" target="_blank">
         <span>📜</span>
         <h3>Terms of Service</h3>
@@ -134,19 +182,19 @@
         <h3>Privacy Policy</h3>
         <p>How we handle data</p>
       </a>
-
     </div>
 
-    <!-- Contact Section -->
     <div class="contact">
       <h3>📞 Contact</h3>
       <p>
         Email: <a href="mailto:krytex.devs@gamil.com">krytex.devs@gamil.com</a><br>
         Support Server:
-        <a href="https://discord.gg/nQxbZDq5uc" target="_blank">
-          discord.gg/krytex
-        </a>
+        <a href="https://discord.gg/nQxbZDq5uc" target="_blank">discord.gg/krytex</a>
       </p>
+
+      <div class="devs">
+        Developed by <strong>Haswanth</strong>, <strong>Vikky</strong> & <strong>Power</strong>
+      </div>
     </div>
 
     <footer>© 2026 Krytex Bot</footer>
