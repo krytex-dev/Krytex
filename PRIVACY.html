@@ -3,83 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Krytex Bot — Privacy Policy</title>
+  <title>Krytex Bot • Privacy Policy</title>
 
   <style>
     :root {
-      --bg: #0b0f1a;
-      --card: rgba(255, 255, 255, 0.08);
-      --border: rgba(255, 255, 255, 0.15);
-      --text: #e6e9f0;
-      --muted: #aab0c2;
-      --accent: #7aa2ff;
+      --bg: #0b0d12;
+      --glass: rgba(255, 255, 255, 0.07);
+      --accent: #6cf2c2;
+      --text: #e6e9ef;
+      --muted: #9aa4b2;
+      --blur: blur(14px);
     }
 
     * {
       box-sizing: border-box;
-      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
       margin: 0;
-      background: radial-gradient(circle at top, #121a33, var(--bg));
+      background: radial-gradient(circle at top, #12172e, var(--bg));
       color: var(--text);
       line-height: 1.7;
-      padding: 40px 16px;
     }
 
-    .container {
+    main {
       max-width: 900px;
       margin: auto;
-    }
-
-    .card {
-      background: var(--card);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      animation: fadeUp 0.8s ease;
+      padding: 2.5rem 1.2rem 4rem;
+      animation: fadeUp 0.9s ease;
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
     }
 
     .updated {
       color: var(--muted);
+      margin-bottom: 2rem;
       font-size: 0.9rem;
-      margin-bottom: 24px;
+    }
+
+    .top-actions {
+      margin-bottom: 1.8rem;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    section {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border-radius: 18px;
+      padding: 1.8rem;
+      margin-bottom: 1.6rem;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
     }
 
     h2 {
-      margin-top: 32px;
-      font-size: 1.3rem;
       color: var(--accent);
+      margin-top: 0;
+      font-size: 1.15rem;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 1.2rem;
     }
 
     li {
-      margin: 6px 0;
-    }
-
-    .note {
-      background: rgba(122, 162, 255, 0.1);
-      border-left: 4px solid var(--accent);
-      padding: 12px 16px;
-      border-radius: 8px;
-      margin: 16px 0;
-      color: var(--muted);
-    }
-
-    .contact {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
+      margin: 0.4rem 0;
     }
 
     a {
@@ -87,112 +96,139 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
-      margin-top: 32px;
       color: var(--muted);
       font-size: 0.85rem;
+      margin-top: 3rem;
     }
 
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(24px);
       }
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
+    /* 📱 Mobile improvements */
+    @media (max-width: 600px) {
+      section {
+        padding: 1.4rem;
+      }
+
+      main {
+        padding: 2rem 1rem 3rem;
+      }
+
+      .back-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
-      <h1>🔐 Krytex Bot — Privacy Policy</h1>
-      <div class="updated">Last Updated: 10 February 2026</div>
+  <main>
 
+    <!-- Back to Home -->
+    <div class="top-actions">
+      <a class="back-btn" href="https://krytex-dev.github.io/Krytex/index.html">
+        ← Back to Home
+      </a>
+    </div>
+
+    <h1>🔐 Krytex Bot — Privacy Policy</h1>
+    <p class="updated"><em>Last Updated: 10 February 2026</em></p>
+
+    <section>
       <p>
-        This Privacy Policy explains how <strong>Krytex Bot</strong> ("Krytex", "the Bot")
-        collects, uses, and protects data while operating on Discord.
+        This Privacy Policy explains how <strong>Krytex Bot</strong> collects, uses,
+        and protects data while operating on Discord.
       </p>
+    </section>
 
+    <section>
       <h2>📊 Data We Collect</h2>
-      <p>Krytex Bot may store the following data:</p>
       <ul>
         <li>User IDs</li>
-        <li>Server (Guild) IDs</li>
+        <li>Server IDs</li>
         <li>Channel IDs</li>
         <li>Role IDs</li>
         <li>Moderation records (warnings, mutes, bans)</li>
         <li>Ticket system data</li>
         <li>Command usage data</li>
       </ul>
+      <p><strong>Note:</strong> Krytex Bot does not read or store private messages (DMs),
+        except for system notifications or moderation actions.</p>
+    </section>
 
-      <div class="note">
-        ⚠️ Krytex Bot does <strong>not</strong> read or store private messages (DMs),
-        except for system notifications or moderation-related messages.
-      </div>
-
+    <section>
       <h2>🎯 Why We Collect Data</h2>
-      <p>Collected data is used strictly to:</p>
       <ul>
         <li>Provide core bot functionality</li>
         <li>Maintain moderation logs</li>
-        <li>Improve performance and reliability</li>
-        <li>Protect servers from abuse and attacks</li>
+        <li>Improve performance and security</li>
+        <li>Protect servers from abuse</li>
       </ul>
+    </section>
 
+    <section>
       <h2>🔒 Data Security</h2>
       <ul>
-        <li>Data is securely stored</li>
-        <li>Access is limited to authorized developers only</li>
-        <li>No data is sold, traded, or shared with third parties</li>
+        <li>Secure data storage</li>
+        <li>Restricted developer access</li>
+        <li>No selling or sharing of data</li>
       </ul>
+    </section>
 
+    <section>
       <h2>🗂 Data Retention</h2>
       <p>
         Data is retained only as long as necessary.
-        Server-related data may be removed after the bot is removed from a server.
+        Server-related data may be deleted after the bot is removed.
       </p>
+    </section>
 
+    <section>
       <h2>🧑‍⚖️ User Rights</h2>
-      <p>Server owners may request:</p>
       <ul>
-        <li>Data removal (where applicable)</li>
-        <li>Information about stored data</li>
-        <li>Privacy-related clarifications</li>
+        <li>Request data removal (where applicable)</li>
+        <li>Request information about stored data</li>
+        <li>Request privacy clarifications</li>
       </ul>
+    </section>
 
+    <section>
       <h2>🔗 Third-Party Services</h2>
       <p>
-        Krytex Bot operates using Discord’s API and follows:
+        Krytex Bot operates under Discord’s API and complies with:
       </p>
       <ul>
         <li>Discord Terms of Service</li>
         <li>Discord Privacy Policy</li>
       </ul>
+    </section>
 
-      <div class="contact">
-        <h2>📞 Contact</h2>
-        <p>
-          For privacy-related questions or requests:
-        </p>
-        <ul>
-          <li>📧 Email: <strong>krytex.devs@gamil.com</strong></li>
-          <li>💬 Support Server: <a href="https://discord.gg/nQxbZDq5uc" target="_blank">discord.gg/krytex</a></li>
-        </ul>
-      </div>
-    </div>
+    <section>
+      <h2>📞 Contact</h2>
+      <ul>
+        <li>📧 Email: <strong>krytex.devs@gamil.com</strong></li>
+        <li>💬 Support Server:
+          <a href="https://discord.gg/nQxbZDq5uc" target="_blank">
+            discord.gg/krytex
+          </a>
+        </li>
+      </ul>
+    </section>
 
     <footer>
-      <strong>Krytex Bot</strong> — Built on Trust & Transparency
+      <strong>Krytex Bot — Built on Trust & Transparency.</strong>
     </footer>
-  </div>
+  </main>
 </body>
 </html>
