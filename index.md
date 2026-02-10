@@ -18,7 +18,6 @@ Please review the documents below before using the bot.
 If you have any questions, concerns, or legal inquiries:
 
 - 📧 General Support: krytex.devs@gamil.com
-- 📧 Privacy Contact: krytex.devs@gamil.com
 - 💬 Discord Support Server: [https://discord.gg/krytex](https://discord.gg/nQxbZDq5uc)
 
 ---
